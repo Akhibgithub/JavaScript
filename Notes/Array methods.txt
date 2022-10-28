@@ -1,0 +1,98 @@
+// 1.=========================
+// let result = arr1.toString(); // converts an array to a string of comma seprated values.
+// console.log(result);
+
+//2.=========================
+// let result = arr2.join("-"); // joins the elements of an array by a separator.
+// console.log(typeof result, result);
+
+//3.=========================
+// let resultpop = arr2.pop(); // popouts the last value of an array and also returns the popped value modifies the original array.
+// console.log(arr2);
+// console.log(resultpop);
+
+//4.=========================
+// let result = arr2.push("F"); // Adds a new element at the end of the array.
+// console.log(arr2);
+// console.log(result);
+
+//5.=========================
+// let result = arr2.shift(); // Removes first element and returns it, modifies the original array.
+// console.log(arr2);
+// console.log(result);
+// console.log(arr2.length);
+
+//6.=========================
+// let result = arr2.unshift("Z"); // Adds element to the begining returns new array length.
+// console.log(arr2);
+// console.log(arr2.length);
+
+//7.=========================
+// let result = arr2.concat(arr1); // Used to join arrays to given array, returns a new array does not change existing arrays.
+// console.log(result);
+// console.log(result.length);
+
+//8.=========================
+// let result = arr2.fill("A"); // The fill() method changes all elements in an array to a static value, from start to end.
+                                   It returns the modified array.
+// console.log(result);
+// console.log(result.length);
+
+//9.=========================
+// let result = arr2.includes("A"); // The includes() method determines whether an array includes a certain value among its entries, 
+                                       returning true or false as appropriate.
+// console.log(result);
+
+//10.=========================
+// let months = ['Jan', 'March', 'April', 'June'];
+// months.splice(1, 0, 'Feb'); //Add and/or removes the items of an array, splice can be used to add new items in an array.
+// console.log(months);
+// console.log(typeof months);
+
+//11.=========================
+// let months = ['Jan', 'March', 'April', 'June'];
+// console.log(months.slice(0,-2)); // slices out a piece from an array and creates a new array.
+// console.log(typeof months,months);
+
+//12.=========================
+// let months = ['Jan', 'March', 'April', 'June'];
+// console.log(months.reverse()); // Reverse the elements in the source array.
+// console.log(typeof months, months);
+
+
+ Higher order methods : 
+
+ 13. map( )
+    This method creates a new array with the results of calling a provided function on every 
+    element in this array.
+
+14. filter( )
+This method creates a new array with only elements that passes
+ the condition inside the provided function.
+
+15. forEach( )
+This method helps to loop over array by executing a provided callback 
+function for each element in an array.
+
+16. every( )
+This method checks every element in the array that passes the condition, 
+returning true or false as appropriate.
+
+17. some( )
+This method checks if at least one element in the array that passes the condition,
+ returning true or false as appropriate.
+
+18. reduce( )
+This method applies a function against an accumulator and each element in the array to reduce it to a single value.
+
+
+19. sort( )
+This method is used to arrange/sort array’s elements either in ascending or descending order.
+
+
+
+
+
+
+
+

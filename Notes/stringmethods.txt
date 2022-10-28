@@ -1,0 +1,2 @@
+1. indexOf : returns the index number of given argument in the string.
+2. includes : returns true or false if the given argument exist 

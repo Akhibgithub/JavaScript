@@ -1,0 +1,66 @@
+var fname = "john"
+undefined
+var lname = "snow"
+undefined
+fname.concat(" ",lname)
+'john snow'
+fname +  lname
+'johnsnow'
+fname + " " + lname
+'john snow'
+var fullName (fname.concat(" ", lname)
+VM3411:1 Uncaught SyntaxError: Unexpected token '('
+var fullName (fname.concat(" ", lname))
+VM3562:1 Uncaught SyntaxError: Unexpected token '('
+var fullName fname.concat(" ", lname)
+VM3742:1 Uncaught SyntaxError: Unexpected identifier 'fname'
+var fullName = fname.concat(" ", lname)
+undefined
+fullName
+'john snow'
+var ironman = "i am grooooot"
+undefined
+ironman.toLocaleUpperCase
+ƒ toLocaleUpperCase() { [native code] }
+ironman.toUpperCase()
+'I AM GROOOOOT'
+ironman.toLocaleLowerCase()
+'i am grooooot'
+ironman.indexOf()
+-1
+ironman.includes("es")
+false
+ironman.includes(ironman)
+true
+ironman.includes(groo)
+VM4456:1 Uncaught ReferenceError: groo is not defined
+    at <anonymous>:1:18
+(anonymous) @ VM4456:1
+"Hello world" .replace("Hello", "Bye")
+'Bye world'
+"Hello world" .replace("Hello  ", "Hi")
+'Hello world'
+var greeting = "Hello world"
+undefined
+greet.slice(6, 9)
+VM4837:1 Uncaught ReferenceError: greet is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM4837:1
+greeting.slice(6, 9)
+'wor'
+"9988-abcd-xyzg".slice(5,9)
+'abcd'
+"9988-abcd-xyzg".slice(-9)
+'abcd-xyzg'
+"9988-abcd-xyzg".slice(-9,-5)
+'abcd'
+"9988-abcd-xyzg".substring(5,9)
+'abcd'
+"9988-abcd-xyzg".substr(5,4)
+'abcd'
+"9988-abcd-xyzg".substr(10,4)
+'xyzg'
+"9988-abcd-xyzg".split("")
+(14) ['9', '9', '8', '8', '-', 'a', 'b', 'c', 'd', '-', 'x', 'y', 'z', 'g']0: "9"1: "9"2: "8"3: "8"4: "-"5: "a"6: "b"7: "c"8: "d"9: "-"10: "x"11: "y"12: "z"13: "g"length: 14[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+"9988-abcd-xyzg".split("-")
+(3) ['9988', 'abcd', 'xyzg']0: "9988"1: "abcd"2: "xyzg"length: 3[[Prototype]]: Array(0)

@@ -1,0 +1,45 @@
+JavaScript is the world's most popular programming language.
+
+JavaScript is the programming language of the Web.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
+Basic definition: 
+JavaScript is high level object oriented and multi paradigm programming language.
+
+Advance definition:
+js is high-level, prototype-based, object oriented,multi-paradigm,interpreted,just-in-time
+compiled,single threaded,garbage-collected programming with first class functions programming
+language.
+
+Data Types:
+1.Primitive
+a.String
+'single qoutes' "double qoutes" `backticks`
+b.Number
+10,10.2
+c.Boolean
+true or false
+d.Null
+e.undefined
+f.symbol
+
+2.Non primitive or Reference type
+a.array
+[10,"ten",false,null,undefined,1,2,3,4,5];
+b.object
+{key:"value", key2:10, isValid:false, arr:[1,2,3,4,5] obj:{name:"john snow",age:26};
+c.functions
+fuctions won't exicute themselves
+function myFunction(){}
+3.Variable
+var str= "Exaltechs";
+var num=20;
+var isLogin=false;
+var something=null;
+var A thing= undefined;
+var names=["a","b","c"]
+var empdetails={empname:"xyz", empAge:20, epmCode: 'ET/1/2022/NED'}
+
+
