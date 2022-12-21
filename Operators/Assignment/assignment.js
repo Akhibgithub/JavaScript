@@ -15,7 +15,7 @@ console.log(c)
 // Minus Equal -=
 var e = 10;
 var f = 25;
-c-=d; 
+e-=f; 
 // e=e-f;
 console.log(e)
 

@@ -2,34 +2,34 @@
 // This keyword: The object that executing the current function.
 // if an fuction is an method in an object it references that object it self.
 
-// function GetCircleArea(radius) {
-//     this.pi = 3.14;
-//     this.radius = radius;
-//     this.getArea = function (){
-//         return this.pi * this.radius * this.radius;
-//     }
-//     return this; //{} 
-// }
-// const firstCircle = new GetCircleArea(5);
-// console.log(firstCircle);
-// console.log(firstCircle.getArea());
-// console.log(new String("hello")); string constructor method.
+function GetCircleArea(radius) {
+    this.pi = 3.14;
+    this.radius = radius;
+    this.getArea = function (){
+        return this.pi * this.radius * this.radius;
+    }
+    return this; //{} 
+}
+const firstCircle = new GetCircleArea(5);
+console.log(firstCircle);
+console.log(firstCircle.getArea());
+console.log(new String("hello")); //string constructor method.
 
 
 // 2.======================
 
-// function PersonDetails(firstName, lastName, email, phone) {
-//     this.firstName = firstName;
-//     this.lastName = lastName;
-//     this.email = email;
-//     this.phone = phone;
-// }
-// const firstPerson = console.log(new PersonDetails('Jon','Snow','stark010402@gmail.com','7414946200'))
+function PersonDetails(firstName, lastName, email, phone) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.phone = phone;
+}
+const firstPerson = console.log(new PersonDetails('Jon','Snow','stark010402@gmail.com','7414946200'))
 
 
 // ===============
 
-// rest operator : It can handle multiple argument.
+// rest operator : It can handle multiple arguments.
 
 // const getTotal = (numOne, numTwo, ...rest) => {
 //     const restSum = rest.reduce((acc, cur) => acc + cur)
@@ -57,14 +57,21 @@
 
 
 
-const int = [1,2,3,4,5,6,7,8,9]
-const aplh = ['a','b','c','d']
-const addTwoArr = [...aplh,20,40,...int]
-console.log(addTwoArr);
+// const int = [1,2,3,4,5,6,7,8,9]
+// const aplh = ['a','b','c','d']
+// const addTwoArr = [...aplh,20,40,...int]
+// console.log(addTwoArr);
 
 
 
-const carPrice = {STO: '6mil',SVJ: '3mil',aventador: '4mil'}
-const carPriceTwo = {pagani: '8mil',maclaren: '4mil',Cup: '2mil'}
-const carTotal = {...carPrice,BMW:'2mil',...carPriceTwo}
-console.log(carTotal);
+// const carPrice = {STO: '6mil',SVJ: '3mil',aventador: '4mil'}
+// const carPriceTwo = {pagani: '8mil',maclaren: '4mil',Cup: '2mil'}
+// const carTotal = {...carPrice,BMW:'2mil',...carPriceTwo}
+// console.log(carTotal);
+
+
+
+// const gotCast = {fst:'Daenerys Targaryen',sec:'Arya Stark',trd:'Jon Snow',fur: 'Khal Drogo'}
+// const hodCast = {fst1:'Viserys Targaryen',sec2:'Daemon Targaryen',trd3:'Rhaenyra Targaryen',fur4: 'Aegon Targaryen'}
+// const both = {...gotCast, ...hodCast}
+// console.log(both);
