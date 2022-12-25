@@ -69,7 +69,10 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  background: url('./newbackground.jpeg')
+    fixed no-repeat;
+  background-size: cover;
+  /* background: var(--clr-grey-10); */
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -96,7 +99,7 @@ h4 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
-  color: var(--clr-grey-4);
+  color: whitesmoke;
 }
 h1 {
   font-size: 3rem;
@@ -205,6 +208,11 @@ Menu
   color: var(--clr-green-light);
   cursor: pointer;
   transition: var(--transition);
+box-shadow: 0 4px 12px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .filter-btn:hover {
   background: var(--clr-green-light);
@@ -224,10 +232,12 @@ Menu
   max-width: 25rem;
 }
 .photo {
-  object-fit: cover;
-  height: 200px;
-  border: 0.25rem solid var(--clr-green-light);
-  border-radius: var(--radius);
+  background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 11px );
+-webkit-backdrop-filter: blur( 11px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .item-info header {
   display: flex;
@@ -238,11 +248,13 @@ Menu
   margin-bottom: 0.5rem;
 }
 .price {
-  color: var(--clr-green-light);
+  color: var(--clr-green-dark);
 }
 .item-text {
   margin-bottom: 0;
   padding-top: 1rem;
+  color: whitesmoke;
+  text-shadow: 0 5px 5px  gray;
 }
 
 @media screen and (min-width: 768px) {
