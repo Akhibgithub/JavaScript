@@ -18,8 +18,43 @@ navToggle.addEventListener('click',()=>{
     }
 })
 const navBar = document.getElementById('nav')
-const topLink = document.getElementById('.top-link')
+const topLink = document.querySelector('.top-link')
 // fixed navbar
 window.addEventListener('scroll',()=>{
   const scrollHeight = window.pageYOffset;
+  const navHeight = navBar.getBoundingClientRect().height;
+  if(scrollHeight > navHeight){
+    navBar.classList.add('fixed-nav')
+  } else {
+    navBar.classList.remove('fixed-nav')
+  }
+
+  if(scrollHeight > 500){
+    topLink.classList.add('show-link')
+  } else{
+    topLink.classList.remove('show-link')
+  }
+})
+
+// smooth scroll
+// select links
+const scrollLinks = document.querySelectorAll('.scroll-link')
+scrollLinks.forEach((links)=>{
+  
+  links.addEventListener('click', (e)=>{
+   e.preventDefault();
+   // navigate to specific spot
+   const id = e.currentTarget.getAttribute('href').slice(1);
+   const element = document.getElementById(id)
+   // calculate the height 
+   const navHeight = navBar.getBoundingClientRect().height;
+   const containerHeight = linksContainer.getBoundingClientRect().height;
+   const  fixedNav = navBar.classList.contains('fixed-nav')
+   let position = element.offsetTop - navHeight;
+   if(!fixedNav){
+    position
+   }
+   window.scrollTo({left:0, top: position})
+   linksContainer.style.height = 0;
+  })
 })

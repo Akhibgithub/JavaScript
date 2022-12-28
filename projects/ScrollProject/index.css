@@ -42,7 +42,7 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-secondary: hsla(182, 63%, 54%);
+  --clr-green-light: hsla(182, 63%, 54%);
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
@@ -166,7 +166,7 @@ p {
 }
 .btn:hover {
   background: var(--clr-white);
-  color: var(--clr-secondary);
+  color: var(--clr-green-light);
 }
 /* section */
 .section {
@@ -211,7 +211,7 @@ nav {
   color: var(--clr-grey-1);
 }
 .fixed-nav .links a:hover {
-  color: var(--clr-secondary);
+  color: var(--clr-green-light);
 }
 /* .fixed-nav .links-container {
   height: auto !important;
@@ -230,7 +230,7 @@ nav {
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: var(--clr-secondary);
+  color: var(--clr-green-light);
 }
 .logo {
   height: 50px;
@@ -330,7 +330,7 @@ header {
   text-transform: uppercase;
 }
 .title span {
-  color: var(--clr-secondary);
+  color: var(--clr-green-light);
 }
 #about,
 #services,
@@ -357,7 +357,7 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-secondary);
+  background: var(--clr-green-light);
   width: 2rem;
   height: 2rem;
   display: grid;
