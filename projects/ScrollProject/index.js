@@ -52,7 +52,9 @@ scrollLinks.forEach((links)=>{
    const  fixedNav = navBar.classList.contains('fixed-nav')
    let position = element.offsetTop - navHeight;
    if(!fixedNav){
-    position
+    position = position - navHeight;
+   } if(navHeight > 82) {
+    position = position + containerHeight;
    }
    window.scrollTo({left:0, top: position})
    linksContainer.style.height = 0;
