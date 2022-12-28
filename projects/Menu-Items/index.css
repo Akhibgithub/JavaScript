@@ -69,8 +69,7 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: url('./newbackground.jpeg')
-    fixed no-repeat;
+  background: url("./newbackground.jpeg") fixed no-repeat;
   background-size: cover;
   /* background: var(--clr-grey-10); */
   color: var(--clr-grey-1);
@@ -208,11 +207,11 @@ Menu
   color: var(--clr-green-light);
   cursor: pointer;
   transition: var(--transition);
-box-shadow: 0 4px 12px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 4px 12px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .filter-btn:hover {
   background: var(--clr-green-light);
@@ -232,12 +231,12 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   max-width: 25rem;
 }
 .photo {
-  background: rgba( 255, 255, 255, 0.3 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 11px );
--webkit-backdrop-filter: blur( 11px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .item-info header {
   display: flex;
@@ -254,7 +253,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   margin-bottom: 0;
   padding-top: 1rem;
   color: whitesmoke;
-  text-shadow: 0 5px 5px  gray;
+  text-shadow: 0 5px 5px gray;
 }
 
 @media screen and (min-width: 768px) {
@@ -275,4 +274,20 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .photo {
     height: 150px;
   }
+}
+
+.all {
+  background: url("./newbackground.jpeg");
+}
+.breakfast {
+  background: url("https://images.pexels.com/photos/101533/pexels-photo-101533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.lunch {
+  background: url("https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.shakes {
+  background: url("https://images.pexels.com/photos/2103945/pexels-photo-2103945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.dinner {
+  background: url("https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }

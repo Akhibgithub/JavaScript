@@ -88,8 +88,7 @@ const container = document.querySelector(".btn-container");
 window.addEventListener("DOMContentLoaded", () => {
   // console.log('shake and bake');
   displayMenuItems(menu);
-  displayMenuButtons(menu)
-  
+  displayMenuButtons(menu);
 });
 
 const displayMenuItems = (menuItems) => {
@@ -114,39 +113,58 @@ const displayMenuItems = (menuItems) => {
 };
 
 const displayMenuButtons = () => {
-    const categories = menu.reduce(
-        (values, item) => {
-          // console.log(item.category);
-          if (!values.includes(item.category)) {
-            values.push(item.category)
-          }
-          return values;
-        },
-        ["all"]
-      );
-      //   console.log(categories);
-      const categoryBtns = categories
-        .map((category) => {
-          return `<button class="filter-btn" type="button" data-id=${category}>${category}</button>`;
-        })
-        .join("");
-      // console.log(categoryBtns);
-      container.innerHTML = categoryBtns;
-      const filterBtns = document.querySelectorAll(".filter-btn");
-      //filter items
-      filterBtns.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          const category = e.currentTarget.dataset.id;
-          const menuCategory = menu.filter((menuItem) => {
-            if (menuItem.category === category) {
-              return menuItem;
-            }
-          });
-          if (category === "all") {
-            displayMenuItems(menu);
-          } else {
-            displayMenuItems(menuCategory);
-          }
-        });
+  const categories = menu.reduce(
+    (values, item) => {
+      // console.log(item.category);
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  //   console.log(categories);
+  const categoryBtns = categories
+    .map((category) => {
+      return `<button class="filter-btn" type="button"  data-id=${category}>${category}</button>`;
+    })
+    .join("");
+  // console.log(categoryBtns);
+  container.innerHTML = categoryBtns;
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  //filter items
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter((menuItem) => {
+        if (menuItem.category === category) {
+          return (
+            menuItem,
+            $(document).ready(() => {
+              $("body").toggleClass(category);
+            })
+          );
+        } 
+        // else if(category === "all"){
+        //   return(
+        //     $(document).ready(() => {
+        //       $("body").removeClass("breakfast lunch shakes dinner");
+        //     })
+        //     )
+        // }
+        // else {
+        //   return(
+        //   $(document).ready(() => {
+        //     $("body").removeClass("breakfast lunch shakes dinner");
+        //   })
+        //   )
+        // }
       });
-}
+      if (category === "all") {
+        displayMenuItems(menu);
+      } else {
+        displayMenuItems(menuCategory);
+      }
+    });
+  });
+};
