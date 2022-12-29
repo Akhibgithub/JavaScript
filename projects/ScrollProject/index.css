@@ -300,7 +300,7 @@ nav {
 /* banner section */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(35, 223, 160, 0.5), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgba(107, 230, 117, 0.5), rgba(0, 0, 0, 0.7)),
     url(./background-big.jpeg) center/cover no-repeat;
 }
 .banner {
