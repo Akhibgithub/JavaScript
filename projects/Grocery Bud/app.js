@@ -12,13 +12,13 @@ let editElement;
 let editFlag = false;
 let editID = "";
 
-// ****** FUNCTIONS **********
+// ****** FUNCTIONS *********
 const addItem = (e) => {
   e.preventDefault();
   //  console.log(grocery.value);
   const value = grocery.value;
   const id = new Date().getTime().toString();
-  console.log(id);
+  // console.log(id);
   if (value && !editFlag) {
     const element = document.createElement("article");
     //add class
@@ -26,6 +26,7 @@ const addItem = (e) => {
     // add id
     const attr = document.createAttribute(`data-id`);
     attr.value = id;
+    // console.log(id);
     element.setAttributeNode(attr);
     element.innerHTML = `<p class="title">${value}</p>
     <div class="btn-container">
@@ -36,21 +37,25 @@ const addItem = (e) => {
     <i class="fas fa-trash"></i>
     </button>
     </div>`;
-    const deleteBtn = element.querySelector('.delete-btn');
-    const editBtn = element.querySelector('.edit-btn');
-    deleteBtn.addEventListener('click',deleteItem)
-    editBtn.addEventListener('click',editItem)
+    const deleteBtn = element.querySelector(".delete-btn");
+    const editBtn = element.querySelector(".edit-btn");
+    deleteBtn.addEventListener("click", deleteItem);
+    editBtn.addEventListener("click", editItem);
     //append child
     list.appendChild(element);
     displayAlert("item added to the list", "success");
     // show container
     container.classList.add(`show-container`);
+    setBackToDefault();
     //add to local storage
     addToLocalStorage(id, value);
     //set back to default
     setBackToDefault();
   } else if (value && editFlag) {
-    console.log("editing");
+    editElement.innerHTML = value;
+    displayAlert("value changed", "success");
+    editLocalStorage(editID, value);
+    setBackToDefault();
   } else {
     displayAlert(`please enter value`, "danger");
   }
@@ -73,25 +78,41 @@ function setBackToDefault() {
   submitBtn.textContent = "submit";
 }
 // clear items
-const clearItems = () =>{
-   const items = document.querySelectorAll('.grocery-item')
+const clearItems = () => {
+  const items = document.querySelectorAll(".grocery-item");
 
-   if(items.length > 0) {
-     items.forEach((item) =>{
+  if (items.length > 0) {
+    items.forEach((item) => {
       list.removeChild(item);
-     })
-   }
-   container.classList.remove('show-container')
-   displayAlert("empty list", 'success')
-   setBackToDefault()
-   //localStorage remove
-}
-const deleteItem = ()=>{
-   console.log('item deleted');
-}
-const editItem = ()=>{
-   console.log('item Edited');
-}
+    });
+  }
+  container.classList.remove("show-container");
+  displayAlert("empty list", "success");
+  setBackToDefault();
+  //localStorage remove
+};
+const deleteItem = (e) => {
+  const element = e.currentTarget.parentElement.parentElement;
+  const id = element.dataset.id;
+  list.removeChild(element);
+  if (list.children.length === 0) {
+    container.classList.remove("show-container");
+  }
+  displayAlert("item removed", "danger");
+  setBackToDefault();
+  //remove from local storage
+  //  removeFromLocalStorage(id)
+};
+const editItem = (e) => {
+  const element = e.currentTarget.parentElement.parentElement;
+  //set edit item
+  editElement = e.currentTarget.parentElement.previousElementSibling;
+  //  set from value
+  grocery.value = editElement.innerHTML;
+  editFlag = true;
+  editID = element.dataset.id;
+  submitBtn.textContent = "edit";
+};
 // function addItem(e) {
 //     e.preventDefault()
 //     console.log(grocery.value);
@@ -100,11 +121,34 @@ const editItem = ()=>{
 //submit form
 form.addEventListener("submit", addItem);
 //clear item
-clearBtn.addEventListener('click',clearItems);
+clearBtn.addEventListener("click", clearItems);
 // delete item
 
 // ****** LOCAL STORAGE **********
-function addToLocalStorage() {
-  console.log("added to local storage");
+function addToLocalStorage(id, value) {
+  const grocery = { id, value };
+  let items = getLocalStorage();
+  console.log(items);
+  items.push(grocery);
+  localStorage.setItem("list", JSON.stringify(items));
+  // console.log("added to local storage");
 }
+function removeFromLocalStorage(id) {}
+
+function editLocalStorage(id, value) {}
+function getLocalStorage() {
+  return localStorage.getItem("list")
+    ? JSON.parse(localStorage.getItem("list"))
+    : [];
+}
+//localSotage API
+//setItem
+//getItem
+//revomeItem
+//save as Strings
+// localStorage.setItem("orange", JSON.stringify(["item", "item2"]));
+
+// const oranges = JSON.parse(localStorage.getItem("orange"));
+// console.log(oranges);
+// localStorage.removeItem("orange");
 // ****** SETUP ITEMS **********
