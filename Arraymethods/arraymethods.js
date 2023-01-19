@@ -1,7 +1,7 @@
-// Array methods. 
+// Array methods.
 
-let arr1 = [1,2,3,4,5];
-let arr2 = ["A","B","C","D","E"];
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = ["A", "B", "C", "D", "E"];
 // console.log(arr1, arr2);
 
 //1.=========================
@@ -49,7 +49,7 @@ let arr2 = ["A","B","C","D","E"];
 
 //10.=========================
 // let months = ['Jan', 'March', 'April', 'June'];
-// months.splice(1, 0, 'Feb'); //Add and/or removes the items of an array, splice can be used to add new items in an array 
+// months.splice(1, 0, 'Feb'); //Add and/or removes the items of an array, splice can be used to add new items in an array
 // // inserts at index 1
 // console.log(months);
 // console.log(typeof months);
@@ -63,7 +63,6 @@ let arr2 = ["A","B","C","D","E"];
 // let months = ['Jan', 'March', 'April', 'June'];
 // console.log(months.reverse()); // Reverse the elements in the source array.
 // console.log(typeof months);
-
 
 //13.=========================
 // var arr3 = [1, 2, 3, 4, 5, 6, 7];
@@ -79,14 +78,14 @@ let arr2 = ["A","B","C","D","E"];
 //     console.log(items < 9);
 // });
 
-   // using forEach method --
-//    const fruits = ['apple', 'banana', 'cherry', 'mango', 'dragonrruit', 'watermelon'] 
+// using forEach method --
+//    const fruits = ['apple', 'banana', 'cherry', 'mango', 'dragonrruit', 'watermelon']
 //    fruits.forEach(myFunction)
 
 // function myFunction(item, index, arr) {
 
 //     // adding strings to the array elements
-//     arr[index] = 'This is fresh' +" " + item + " " + 'you can have it :)';
+//     arr[index] = `This is fresh ${item} you can have it :)`;
 // }
 
 // console.log(fruits);
@@ -105,7 +104,6 @@ let arr2 = ["A","B","C","D","E"];
 //  });
 //  console.log(everyArray);
 
-
 // 17.=========================
 //  var arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 18];
 //  var someArray = arr3.some(function(myElements){
@@ -113,22 +111,19 @@ let arr2 = ["A","B","C","D","E"];
 //  });
 //  console.log(someArray);
 
-
 // 18.=========================
 //  var arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 18];
 //  var reduceArray = arr3.reduce(function(total, current){
 //  return total + current;
 // });
-// console.log(reduceArray); 
-
+// console.log(reduceArray);
 
 // 19.=========================
 //  var arr3 = [10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 //  var sortArray = arr3.sort(function(a,b ){
 //  return a-b;
 // });
-// console.log(sortArray); 
-
+// console.log(sortArray);
 
 // 20.=========================
 const shapes = ["sqaure", "rectangle", "circle", "trangle", "diamond"];
@@ -137,14 +132,27 @@ const shapes = ["sqaure", "rectangle", "circle", "trangle", "diamond"];
 //     return items === "diamond";
 //  }));
 
-
 // some
 // console.log(shapes.some(function(abc){
 //  return abc === "trangle"
 // }))
 
-const products = ["Apple", "samsung","realme", "woodland","Nike","Apple","samsung",
-"realme","realme", "woodland","realme", "woodland","Nike","Apple"];
+const products = [
+  "Apple",
+  "samsung",
+  "realme",
+  "woodland",
+  "Nike",
+  "Apple",
+  "samsung",
+  "realme",
+  "realme",
+  "woodland",
+  "realme",
+  "woodland",
+  "Nike",
+  "Apple",
+];
 
 // console.log(products.filter(function(item){
 //  return item ==="Apple" || item ==="woodland" || item ==="samsung";
